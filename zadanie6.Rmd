@@ -1,0 +1,79 @@
+---
+title: "zadanie6"
+author: "Dominika Meissner"
+date: "8 czerwca 2018"
+output:
+  html_document:
+    theme: simplex
+    highlight: espresso
+    df_print: paged
+  
+  
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# **Marketing**
+  
+Marketing to proces społeczny, w którym jednostki i grupy otrzymują to, czego potrzebują poprzez tworzenie, oferowanie oraz swobodną wymianę z innymi towarów i usług, które posiadają wartość. Najkrótsza definicja marketingu brzmi „zaspokajać potrzeby, osiągając zysk". Dobrze rozumiany marketing to nie zestaw trików i działań doraźnych, lecz przemyślana strategia i wynikająca z niej taktyka działania, dostosowane do docelowych odbiorców, oparte na wiedzy i badaniach, osadzone mocno w realiach rynkowych.
+
+#### W ramach marketingu możemy wyróżnić wiele zagadnień, takich jak:
+
+  1. Odnajdywanie i ocenianie możliwości rynkowych, prowadzących do zaspokojenia potrzeb określonych odbiorców (nabywców) oraz dokładne ustalenie tych potrzeb
+  2. Opracowywanie w oparciu o tę wiedzę produktu oraz strategii jego dystrybucji
+  3. Przygotowanie odpowiedniej strategii ceny
+  4. Komunikacja z rynkiem
+  
+### *Wybrane rodzaje marketingu*
+  
+  Istnieje naprawdę wiele rodzajów marketingu, ale tutaj wypiszę ich tylko kilka:
+  
+  * Marketing sensoryczny
+  * Marketing szeptany
+  * Marketing internetowy
+  * Merketing mobilny
+  
+### Kilka filmów o marketingu
+  
+| tytuł | rok wydania | ocena IMDb |
+| --- | --- | --- |
+| Diabeł ubiera się u Prady | 2006 | 6,9 |
+| Wilk z Wall Street | 2013 | 8,2 |
+| Jak zrobić karierę w reklamie | 1989 | 7,0 |
+| Dziękujemy za palenie | 2005 | 7,6 |
+
+## *Dziwne rzeczy w R*
+
+### Cytat
+
+```
+> „W ten sposób piszemy cytaty”
+
+``` 
+
+### Tabelka
+
+```{r include=FALSE}
+
+library(tidyverse)
+library(ggplot2)
+
+```
+
+```{r echo=FALSE}
+
+mpg
+
+```
+
+
+### Wykres
+
+```{r echo=FALSE}
+ggplot(data = mpg) + 
+  geom_histogram(mapping = aes(displ), bins = 35) +
+  labs(title = "Pojemności silnika", x = "Pojemność", y = "Ilość")
+  
+```
